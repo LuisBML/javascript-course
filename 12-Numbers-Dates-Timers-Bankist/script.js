@@ -153,11 +153,11 @@ const calcDisplaySummary = function (account) {
   labelSumInterest.textContent = formatCurrency(interests, account.locale, account.currency);
 };
 
-
+// input: Jessica Davis, output: jd
 const createUsernames = function (user_accounts) {
   user_accounts.forEach(function (user_account) {
     user_account.username = user_account.owner
-      .toLocaleLowerCase()
+      .toLowerCase()
       .split(' ')
       .map(element => element[0])
       .join('');

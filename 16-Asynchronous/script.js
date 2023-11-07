@@ -56,9 +56,9 @@ const getCountryData = function (country) {
         .finally(() => {
             countriesContainer.style.opacity = 1;
         });
-}
+};
 
-// getCountryData('denmark');
+getCountryData('denmark');
 
 ////////////////////////////////////////
 ////// Promisifying settimeout ////////
@@ -238,14 +238,14 @@ const createImage = function (imgPath) {
 
 // console.log('Coding Challenge #2');
 
-// createImage('/final/img/img-1.jpg')
+// createImage('./final/img-1.jpg')
 //     .then((responseImg) => {
 //         backgroundImg = responseImg;
 //         return wait(2);
 //     })
 //     .then(() => {
 //         backgroundImg.style.display = 'none';
-//         return createImage('/final/img/img-2.jpg');
+//         return createImage('./final/img-2.jpg');
 //     })
 //     .then((responseImg2) => {
 //         backgroundImg = responseImg2;
@@ -263,12 +263,12 @@ console.log('Coding Challenge #3');
 const loadNPause = async function () {
     try {
         // Load image
-        const responseImg = await createImage('/final/img/img-1.jpg');
+        const responseImg = await createImage('/final/img-1.jpg');
         await wait(2);
         responseImg.style.display = 'none';
 
         // Load image
-        const responseImg2 = await createImage('/final/img/img-2.jpg');
+        const responseImg2 = await createImage('/final/img-2.jpg');
         await wait(2);
         responseImg2.style.display = 'none';
 
@@ -297,4 +297,4 @@ const loadAll = async function (imgArr) {
     }
 };
 
-loadAll(['/final/img/img-1.jpg', '/final/img/img-2.jpg', '/final/img/img-3.jpg']);
+// loadAll(['./final/img-1.jpg', './final/img-2.jpg', './final/img-3.jpg']);
